@@ -7,7 +7,6 @@ export const allRoutes = [
     new Route("/services", "Les services", "/pages/services.html"),
 
 ];
-];
 
 //Le titre s'affiche comme ceci : Route.titre - websitename
 export const websiteName = "Arcadia Zoo";
