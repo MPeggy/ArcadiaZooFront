@@ -25,6 +25,7 @@ p{
 .hero-scene{
     
     position: relative;
+    margin-bottom: 15px;
     &::before{
         content:"";
         position: absolute;
@@ -34,9 +35,9 @@ p{
         height: 100%;
         background-image: url(/images/Images/Arbre\ planete.png);
         background-size: cover;
-        filter: brightness(0.5);}
+        filter: brightness(0.5);
     }
-
+    
     *{
         //Positionner les éléments devant le before//
         position: relative;
@@ -49,7 +50,7 @@ p{
         align-items: center;
         justify-content: center;
     }
-
+}
 .text-justify {
     text-align: justify;
 
