@@ -9,10 +9,10 @@ export const allRoutes = [
     new Route("/jungle", "La jungle", "/pages/habitats/jungle.html"),
     new Route("/marais", "Le marais", "/pages/habitats/marais.html"),
     new Route("/contact", "Le marais", "/pages/contact.html"),
-    new Route("/signin", "Connexion/Déconnexion salariés", "/pages/auth/signin.html"),
-    new Route("/signup", "Inscription", "/pages/auth/signup.html"),
+    new Route("/signin", "Connexion/Déconnexion salariés", "/pages/auth/signin.html", "/js/auth/signin.js"),
+    new Route("/signup", "Inscription", "/pages/auth/signup.html", "/js/auth/signup.js"),
     new Route("/account", "Mon compte salarié", "/pages/auth/account.html"),
-    new Route("/galerie", "Galerie", "/pages/galerie.html"),
+    new Route("/galerie", "Galerie", "/pages/galerie.html", "/js/galerie.js"),
     new Route("/editPassword", "Changer de mot de passe", "/pages/auth/editPassword.html"),
     new Route("/ensavoirplus", "En savoir plus", "/pages/ensavoirplus.html"),
 ];
