@@ -1,11 +1,14 @@
-const btnSingin = document.getElementById("btnSignin");
-const passwordInput = document.getElementById(passwordInput)
+const mailInput = document.getElementById("EmailInput");
+const passwordInput = document.getElementById("PasswordInput");
 const btnSignin = document.getElementById("btnSignin");
 
-btnSingin.addEventListener("click", checkCredentials);
+inputMail.addEventListener("keyup", validateForm);
+inputPassword.addEventListener("keyup", validateForm);
+
+btnSignin.addEventListener("click", checkCredentials);
 
 function checkCredentials(){
-    //Ici, il faudra appeler l'API pour vérifier les credentials en BDD
+      //Ici, il faudra appeler l'API pour vérifier les credentials en BDD
     
     if(mailInput.value == "test@mail.com" && passwordInput.value == "123"){
         //Il faudra récupérer le vrai token
