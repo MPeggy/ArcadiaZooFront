@@ -18,7 +18,8 @@ inputValidationPassword.addEventListener("keyup", validateForm);
 function validateForm(){
     const nomOk = validateRequired(inputNom);
     const prenomOk = validateRequired(inputPreNom);
-    const mailOk = validateMail(inputUsername);
+    const usernameOk = validateMail(inputUsername);
+    const mailOk = validateMail(inputMail);
     const passwordOk = validatePassword(inputPassword);
     const passwordConfirmOk = validateConfirmationPassword (inputPassword, inputValidationPassword);
 
