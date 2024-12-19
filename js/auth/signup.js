@@ -1,15 +1,16 @@
 //Implémenter le JS de ma page
 const inputNom = document.getElementById("NomInput");
 const inputPreNom = document.getElementById("PrenomInput");
-const inputUsername = document.getElementById("UsernameInput");
 const inputMail = document.getElementById("EmailInput");
 const inputPassword = document.getElementById("PasswordInput");
 const inputValidationPassword = document.getElementById("ValidatePasswordInput");
 const btnValidationInscription = document.getElementById("btn-validation-inscription");
 
+// Désactiver le bouton par défaut
+btnValidationInscription.disabled = true;
+
 inputNom.addEventListener("keyup", validateForm); 
 inputPreNom.addEventListener("keyup", validateForm);
-inputUsername.addEventListener("keyup", validateForm);
 inputMail.addEventListener("keyup", validateForm);
 inputPassword.addEventListener("keyup", validateForm);
 inputValidationPassword.addEventListener("keyup", validateForm);
@@ -18,14 +19,15 @@ inputValidationPassword.addEventListener("keyup", validateForm);
 function validateForm(){
     const nomOk = validateRequired(inputNom);
     const prenomOk = validateRequired(inputPreNom);
-    const usernameOk = validateMail(inputUsername);
     const mailOk = validateMail(inputMail);
     const passwordOk = validatePassword(inputPassword);
     const passwordConfirmOk = validateConfirmationPassword (inputPassword, inputValidationPassword);
 
-
-    if(nomOk && prenomOk && mailOk && usernameOk && passwordOk && passwordConfirmOk){
-        btnValidation.disabled = false;
+    if(nomOk && prenomOk && mailOk && passwordOk && passwordConfirmOk){
+        btnValidationInscription.disabled = false;
+    }
+    else{
+        btnValidationInscription.disabled = true;
     }
 }
 

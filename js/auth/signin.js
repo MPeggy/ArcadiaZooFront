@@ -2,6 +2,9 @@ const inputMail = document.getElementById("EmailInput");
 const inputPassword = document.getElementById("PasswordInput");
 const btnSignin = document.getElementById("btnSignin");
 
+// Désactiver le bouton par défaut
+btnSignin.disabled = true;
+
 inputMail.addEventListener("keyup", validateForm);
 inputPassword.addEventListener("keyup", validateForm);
 
@@ -9,10 +12,13 @@ btnSignin.addEventListener("click", checkCredentials);
 
 function validateForm(){
     const mailOk = validateMail(inputMail);
-    const passwordOk = validatePassword(InputPassword);
+    const passwordOk = validatePassword(inputPassword);
 
     if(mailOk && passwordOk ){
-        btnValidation.disabled = false;
+        btnSignin.disabled = false;        
+    }
+    else{
+        btnSignin.disabled = true;
     }
 }
 
@@ -51,7 +57,7 @@ function validatePassword(input){
 function checkCredentials(){
       //Ici, il faudra appeler l'API pour vérifier les credentials en BDD
     
-    if(mailInput.value == "test@mail.com" && passwordInput.value == "123"){
+    if(inputMailnput.value == "test@mail.com" && inputPassword.value == "123"){
         //Il faudra récupérer le vrai token
         const token = "lkjsdngfljsqdnglkjsdbglkjqskjgkfjgbqslkfdgbskldfgdfgsdgf";
         setToken(token);
